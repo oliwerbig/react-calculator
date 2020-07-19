@@ -23,6 +23,7 @@ class Calculator extends React.Component {
             try {
                 const evalResult = eval(equation);
                 const result = Number.isInteger(evalResult)? evalResult : evalResult.toFixed(2);
+                this.clear();
                 this.setState({result});
             } catch (error) {
                 alert('Invalid Mathematical Equation');
